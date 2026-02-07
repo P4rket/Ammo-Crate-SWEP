@@ -197,7 +197,7 @@ function SWEP:PrimaryAttack()
     if SERVER then
         self:SetClip1(self:Clip1() - 30)
         
-        local ent = ents.Create("sent_ammo_box_dropped")
+        local ent = ents.Create("entity_ammo_crate")
         if IsValid(ent) then
             local ply = self:GetOwner()
             ent:SetPos(ply:GetShootPos() + ply:GetForward() * 20)
